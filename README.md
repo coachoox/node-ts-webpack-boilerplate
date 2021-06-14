@@ -29,7 +29,8 @@
 - `eslint-config-prettier`
 - `@typescript-eslint/eslint-plugin`
 - `@typescript-eslint/parser`
-- `typescript`
+- `ts-node`
+- `ts-loader`
 - `sass`
 - `sass-loader`
 - `node-sass`
@@ -38,6 +39,4 @@
 - `babel-loader`
 - `@babel/core`
 - `@babel/cli`
-- `@babel/node`
 - `@babel/preset-env`
-- `@babel/register`
