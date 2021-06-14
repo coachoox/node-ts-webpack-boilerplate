@@ -1,11 +1,11 @@
 const path = require("path");
 const miniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const BASE_URL = "./src/client/js";
+const BASE_URL = "./src/client/ts";
 
 module.exports = {
     entry: {
-        index: `${BASE_URL}/index.js`,
+        index: `${BASE_URL}/index.ts`,
     },
     output: {
         filename: "js/[name].js",
@@ -15,6 +15,11 @@ module.exports = {
     plugins: [new miniCssExtractPlugin({ filename: "css/style.css" })],
     module: {
         rules: [
+            {
+                test: /\.tsx?$/,
+                use: "ts-loader",
+                exclude: /node_modules/,
+            },
             {
                 test: /\.js$/,
                 use: {
@@ -31,5 +36,8 @@ module.exports = {
                 use: [miniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
         ],
+    },
+    resolve: {
+        extensions: [".tsx", ".ts", ".js"],
     },
 };

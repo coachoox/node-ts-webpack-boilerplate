@@ -1,19 +1,27 @@
 {
-  "name": "ts-webpack-boilerplate",
-  "version": "1.0.0",
-  "description": "NodeJS, Express, WebPack, ESLint, Prettier and Babel.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/coachoox/node-ts-webpack-boilerplate.git"
-  },
-  "author": "coachoox (coachmsoox@gmail.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/coachoox/node-ts-webpack-boilerplate/issues"
-  },
-  "homepage": "https://github.com/coachoox/node-ts-webpack-boilerplate#readme"
+    "name": "ts-webpack-boilerplate",
+    "version": "1.0.0",
+    "description": "NodeJS, Express, WebPack, ESLint, Prettier and Babel.",
+    "author": {
+        "name": "Coach OOX",
+        "email": "coachmsoox@gmail.com",
+        "url": "https://github.com/coachoox"
+    },
+    "license": "MIT",
+    "scripts": {
+        "build": "npm run build:server && npm run build:assets",
+        "build:server": "babel src -d build",
+        "build:assets": "webpack --mode=production",
+        "start": "node build/server.js",
+        "dev:server": "nodemon",
+        "dev:assets": "webpack --mode=development -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/coachoox/node-ts-webpack-boilerplate.git"
+    },
+    "bugs": {
+        "url": "https://github.com/coachoox/node-ts-webpack-boilerplate/issues"
+    },
+    "homepage": "https://github.com/coachoox/node-ts-webpack-boilerplate#readme"
 }
