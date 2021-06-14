@@ -16,3 +16,5 @@ app.get("/", (request, response) => response.render("base"));
 app.listen(PORT, () => {
     console.log(`🚀 http://localhost:${PORT}`);
 });
+
+export {};
